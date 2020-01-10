@@ -7392,10 +7392,12 @@ if (window.location.pathname == '/contact/') {
 } //Share property
 
 
-var shareProperty = function shareProperty() {
+function shareProperty() {
   var propertyNameFromUrl = encodeURIComponent(document.title);
   var splitpropertyNameFromUrl = propertyNameFromUrl.split("%7C");
   var propertyName = splitpropertyNameFromUrl[0];
   var propertyUrl = encodeURIComponent(document.URL);
   window.location.href = "mailto:?subject=Check out this property: " + propertyName + "&body=Hi,%0D%0A%0D%0AThis property is worth considering as part of our search:%20%0D%0A%0D%0AAddress: " + propertyName + "%20%0D%0A%0D%0AVisit: " + propertyUrl + "%20%0D%0A%0D%0ABest,";
-};
+}
+
+;
