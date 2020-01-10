@@ -14,7 +14,8 @@ gulp watch-bs
 
 *To export a datebase: <br>
 In Terminal: <br>
-cd to a folder you wish to keep your back up. i.e: <br> cd YOUR_LOCAL_PATH/backups <br>
+cd to a folder you wish to keep your back up. i.e: <br>
+cd YOUR_LOCAL_PATH/backups <br>
 
 docker run -it --link DBCONTAINERNAME:mysql \
    --rm mariadb:latest \
