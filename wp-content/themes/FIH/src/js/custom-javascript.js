@@ -80,7 +80,7 @@ const residence = document.querySelector('.residence');
 const favCell = document.querySelector('.fav-cell');
 
 
-
+if (window.location.pathname=='/floor-plans/') {
 
 gridViewButton.onclick = function () {
 	apartmentsTable.classList.add('grid-view');
@@ -98,6 +98,8 @@ tableViewButton.onclick = function () {
 
 
   };
+
+}
 
 
 

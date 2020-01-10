@@ -7215,19 +7215,21 @@ const apartmentsTable = document.querySelector('.apartments-table');
 const residence = document.querySelector('.residence');
 const favCell = document.querySelector('.fav-cell');
 
-gridViewButton.onclick = function () {
-  apartmentsTable.classList.add('grid-view');
-  apartmentsTable.classList.remove('dataTable');
-  tableViewButton.classList.remove('active');
-  gridViewButton.classList.add('active');
-};
+if (window.location.pathname == '/floor-plans/') {
+  gridViewButton.onclick = function () {
+    apartmentsTable.classList.add('grid-view');
+    apartmentsTable.classList.remove('dataTable');
+    tableViewButton.classList.remove('active');
+    gridViewButton.classList.add('active');
+  };
 
-tableViewButton.onclick = function () {
-  apartmentsTable.classList.remove('grid-view');
-  apartmentsTable.classList.add('dataTable');
-  tableViewButton.classList.add('active');
-  gridViewButton.classList.remove('active');
-}; // image transition on accordion change -- building-amenities page
+  tableViewButton.onclick = function () {
+    apartmentsTable.classList.remove('grid-view');
+    apartmentsTable.classList.add('dataTable');
+    tableViewButton.classList.add('active');
+    gridViewButton.classList.remove('active');
+  };
+} // image transition on accordion change -- building-amenities page
 
 
 if (window.location.pathname == '/building-amenities/') {
