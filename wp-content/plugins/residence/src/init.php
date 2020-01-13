@@ -181,6 +181,7 @@ function block_dynamic_render_cb ( $att ) {
 	}
 	$html .=	'<tr class="single-residence">';
 	$html .=        '<td class="thumbnail"><a href="' . $url . '">' .$thumb .'</a></td>';
+	$html .=        '<td class="gap"> &nbsp; </td> ';
 	$html .=        '<td class="residence">';
 	$html .=		'<span class="card__residence"><a href="' . $url . '">' . $residence .'</a></span>';
 	$html .=		'</td>';
@@ -208,7 +209,7 @@ function block_dynamic_render_cb ( $att ) {
 	$html .=		'<td class="hide_on_table" >';
 	$html .=			'<span>Price: </span>$';
 	$html .=			'<span class="card__price">' . $price . '</span></td>';
-	$html .= '<td class="fav-cell"><div class="fav-button" data-post-id=' . $postId .'>0</div></td>';
+	$html .= '<td class="fav-cell" data-order="0"><div class="fav-button" data-post-id=' . $postId .'>0</div></td>';
 	$html .=		'</tr>';
 
 

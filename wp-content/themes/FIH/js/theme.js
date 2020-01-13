@@ -7176,10 +7176,12 @@ const saveToFavorite = name => {
 
   if (!getCookie(name)) {
     setCookie(name, "favourited");
-    favButton.classList.add("active"); //	favButton.parentElement.innerHTML = '1 <div>ddd</div>';
+    favButton.classList.add("active");
+    favButton.parentElement.setAttribute('data-order', '1');
   } else {
     deleteCookie(name, "/");
-    favButton.classList.remove("active"); //	favButton.innerHTML += "0";
+    favButton.classList.remove("active");
+    favButton.parentElement.setAttribute('data-order', '0');
   }
 };
 
@@ -7201,7 +7203,7 @@ jQuery(document).ready(function ($) {
       "targets": 1,
       "orderable": false
     }, {
-      "targets": 9,
+      "targets": 11,
       "orderable": false
     }]
   }); // Slick slider for neighborhood page
