@@ -7215,19 +7215,21 @@ const apartmentsTable = document.querySelector('.apartments-table');
 const residence = document.querySelector('.residence');
 const favCell = document.querySelector('.fav-cell');
 
-gridViewButton.onclick = function () {
-  apartmentsTable.classList.add('grid-view');
-  apartmentsTable.classList.remove('dataTable');
-  tableViewButton.classList.remove('active');
-  gridViewButton.classList.add('active');
-};
+if (window.location.pathname == '/floor-plans/') {
+  gridViewButton.onclick = function () {
+    apartmentsTable.classList.add('grid-view');
+    apartmentsTable.classList.remove('dataTable');
+    tableViewButton.classList.remove('active');
+    gridViewButton.classList.add('active');
+  };
 
-tableViewButton.onclick = function () {
-  apartmentsTable.classList.remove('grid-view');
-  apartmentsTable.classList.add('dataTable');
-  tableViewButton.classList.add('active');
-  gridViewButton.classList.remove('active');
-}; // image transition on accordion change -- building-amenities page
+  tableViewButton.onclick = function () {
+    apartmentsTable.classList.remove('grid-view');
+    apartmentsTable.classList.add('dataTable');
+    tableViewButton.classList.add('active');
+    gridViewButton.classList.remove('active');
+  };
+} // image transition on accordion change -- building-amenities page
 
 
 if (window.location.pathname == '/building-amenities/') {
@@ -7392,10 +7394,12 @@ if (window.location.pathname == '/contact/') {
 } //Share property
 
 
-var shareProperty = function shareProperty() {
+function shareProperty() {
   var propertyNameFromUrl = encodeURIComponent(document.title);
   var splitpropertyNameFromUrl = propertyNameFromUrl.split("%7C");
   var propertyName = splitpropertyNameFromUrl[0];
   var propertyUrl = encodeURIComponent(document.URL);
   window.location.href = "mailto:?subject=Check out this property: " + propertyName + "&body=Hi,%0D%0A%0D%0AThis property is worth considering as part of our search:%20%0D%0A%0D%0AAddress: " + propertyName + "%20%0D%0A%0D%0AVisit: " + propertyUrl + "%20%0D%0A%0D%0ABest,";
-};
+}
+
+;

@@ -80,7 +80,7 @@ const residence = document.querySelector('.residence');
 const favCell = document.querySelector('.fav-cell');
 
 
-
+if (window.location.pathname=='/floor-plans/') {
 
 gridViewButton.onclick = function () {
 	apartmentsTable.classList.add('grid-view');
@@ -98,6 +98,8 @@ tableViewButton.onclick = function () {
 
 
   };
+
+}
 
 
 
@@ -322,7 +324,7 @@ window.onload = function() {
 
 //Share property
 
-var shareProperty = function shareProperty() {
+ function shareProperty() {
 	var propertyNameFromUrl = encodeURIComponent(document.title);
 	var splitpropertyNameFromUrl = propertyNameFromUrl.split("%7C");
 	var propertyName = splitpropertyNameFromUrl[0];

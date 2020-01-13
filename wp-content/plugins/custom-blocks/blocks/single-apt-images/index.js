@@ -146,7 +146,7 @@ registerBlockType('davidyeiser-detailer/single-apt-images', {
 
     return (
       <div className={className}>
-        <label>Floorplan:</label>
+        <label>Floorplan: </label>
         <MediaUpload
           onSelect={media => {
             setAttributes({ imageIdFloorplan: media.id, imageUrlFloorplan: media.url });
@@ -155,7 +155,7 @@ registerBlockType('davidyeiser-detailer/single-apt-images', {
           value={attributes.imageID}
           render={({ open }) => getImageButtonFloorplan(open)}
         />
-        <label>Aspect:</label>
+        <label>Aspect: </label>
         <MediaUpload
           onSelect={media => {
             setAttributes({ imageIdAspect: media.id, imageUrlAspect: media.url });
@@ -164,7 +164,7 @@ registerBlockType('davidyeiser-detailer/single-apt-images', {
           value={attributes.imageID}
           render={({ open }) => getImageButtonAspect(open)}
         />
-        <label>Views:</label>
+        <label>Views: </label>
         <MediaUpload
           onSelect={media => {
             setAttributes({ imageIdViews: media.id, imageUrlViews: media.url });

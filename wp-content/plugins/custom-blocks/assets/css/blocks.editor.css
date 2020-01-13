@@ -2,7 +2,7 @@
   font-style: italic;
 }
 .wp-admin-banner-summary {
-  margin-top: 24px;
+  margin-top: 25px;
 }
 .wp-admin-banner-author {
   font-style: italic;
@@ -10,3 +10,5 @@
 .wp-admin-banner-summary {
   margin-top: 24px;
 }
+
+.wp-block-davidyeiser-detailer-single-apt-images img {max-width: 100px;}
