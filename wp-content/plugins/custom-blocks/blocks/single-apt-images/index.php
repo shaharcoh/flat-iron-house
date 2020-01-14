@@ -30,15 +30,20 @@ function render_dynamic_block_sai($attributes) {
 
   /* BEGIN HTML OUTPUT */
 ?>
-  <div class="block-single-imaage" data-toggle="modal" data-target="#gallery-modal-floorplan" data-img-num="1">
+</div> <!-- closing container apt-info div  -->
+<div class="col-md-8 main-image">
+  <div class="block-single-image active" data-toggle="modal" data-target="#gallery-modal-floorplan" data-img-num="1">
     <?php echo wp_get_attachment_image( $imageIdFloorplan, array('700', '600'), "", array( "class" => "img-responsive" ) );  ?>
   </div>
-  <div class="block-single-imaage" data-toggle="modal" data-target="#gallery-modal-aspect" data-img-num="2">
+  <div class="block-single-image" data-toggle="modal" data-target="#gallery-modal-aspect" data-img-num="2">
     <?php echo wp_get_attachment_image( $imageIdAspect, array('700', '600'), "", array( "class" => "img-responsive" ) );  ?>
   </div>
-  <div class="block-single-imaage" data-toggle="modal" data-target="#gallery-modal-views" data-img-num="3">
+  <div class="block-single-image" data-toggle="modal" data-target="#gallery-modal-views" data-img-num="3">
     <?php echo wp_get_attachment_image( $imageIdViews, array('700', '600'), "", array( "class" => "img-responsive" ) );  ?>
   </div>
+</div>
+  </div>
+      </div> <!-- closing container and row divs opened in content-apartments.php -->
 
       <!-- Modal -->
       <div class="modal fade" id="gallery-modal-floorplan" tabindex="-1" role="dialog" aria-labelledby="gallery-modalTitle"

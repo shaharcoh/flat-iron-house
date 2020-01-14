@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>00-ATOMS/GLOBAL/Icon/Star Favorit</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="02-COMPONENTS/DESKTOP/Apart-detail" transform="translate(-52.000000, -94.000000)" stroke="#3C3C3B">
+            <g id="Group-2">
+                <g id="Group" transform="translate(53.000000, 94.000000)">
+                    <g id="00-ATOMS/GLOBAL/Icon/General/Star" transform="translate(0.000000, 1.000000)">
+                        <g id="New/Icon/favourite/selected">
+                            <polygon id="Fill-1" stroke-width="1.5" points="9.5 0 6.5643182 5.92470004 0 6.87546545 4.74959238 11.4877948 3.6286364 18 9.5 14.9251138 15.3721788 18 14.2504076 11.4877948 19 6.87546545 12.4356818 5.92470004"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
