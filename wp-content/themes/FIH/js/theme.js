@@ -7177,11 +7177,11 @@ const saveToFavorite = name => {
   if (!getCookie(name)) {
     setCookie(name, "favourited");
     favButton.classList.add("active");
-    favButton.parentElement.setAttribute('data-order', '1');
+    favButton.parentElement.setAttribute("data-order", "1");
   } else {
     deleteCookie(name, "/");
     favButton.classList.remove("active");
-    favButton.parentElement.setAttribute('data-order', '0');
+    favButton.parentElement.setAttribute("data-order", "0");
   }
 };
 
@@ -7194,61 +7194,88 @@ favBtns.forEach(favBtn => {
 }); // floorplans table
 
 jQuery(document).ready(function ($) {
-  $('#apartments').DataTable({
-    "searching": false,
-    "lengthChange": false,
-    "paging": false,
-    "info": false,
-    "columnDefs": [{
-      "targets": 1,
-      "orderable": false
+  $("#apartments").DataTable({
+    searching: false,
+    lengthChange: false,
+    paging: false,
+    info: false,
+    columnDefs: [{
+      targets: 1,
+      orderable: false
     }, {
-      "targets": 11,
-      "orderable": false
+      targets: 11,
+      orderable: false
     }]
   }); // Slick slider for neighborhood page
 
-  $('.slider').slick({});
+  $(".slider").slick({});
 }); // floorplans table>grid view
 
-const tableViewButton = document.querySelector('.view_btn.table');
-const gridViewButton = document.querySelector('.view_btn.grid_display');
-const apartmentsTable = document.querySelector('.apartments-table');
-const residence = document.querySelector('.residence');
-const favCell = document.querySelector('.fav-cell');
+const tableViewButton = document.querySelector(".view_btn.table");
+const gridViewButton = document.querySelector(".view_btn.grid_display");
+const apartmentsTable = document.querySelector(".apartments-table");
+const residence = document.querySelector(".residence");
+const favCell = document.querySelector(".fav-cell");
 
-if (window.location.pathname == '/floor-plans/') {
+if (window.location.pathname == "/floor-plans/") {
   gridViewButton.onclick = function () {
-    apartmentsTable.classList.add('grid-view');
-    apartmentsTable.classList.remove('dataTable');
-    tableViewButton.classList.remove('active');
-    gridViewButton.classList.add('active');
+    apartmentsTable.classList.add("grid-view");
+    apartmentsTable.classList.remove("dataTable");
+    tableViewButton.classList.remove("active");
+    gridViewButton.classList.add("active");
   };
 
   tableViewButton.onclick = function () {
-    apartmentsTable.classList.remove('grid-view');
-    apartmentsTable.classList.add('dataTable');
-    tableViewButton.classList.add('active');
-    gridViewButton.classList.remove('active');
+    apartmentsTable.classList.remove("grid-view");
+    apartmentsTable.classList.add("dataTable");
+    tableViewButton.classList.add("active");
+    gridViewButton.classList.remove("active");
   };
 } // image transition on accordion change -- building-amenities page
 
 
-if (window.location.pathname == '/building-amenities/') {
-  const accordionHeaders = Array.from(document.querySelectorAll('.accordion.building-amenities .btn.btn-link'));
-  const imagesForAccordion = Array.from(document.querySelectorAll('.accordion-images ul li'));
-  imagesForAccordion ? imagesForAccordion[0].classList.add('active') : ''; // add active to first default item
+if (window.location.pathname == "/building-amenities/") {
+  const accordionHeaders = Array.from(document.querySelectorAll(".accordion.building-amenities .btn.btn-link"));
+  const imagesForAccordion = Array.from(document.querySelectorAll(".accordion-images ul li"));
+  imagesForAccordion ? imagesForAccordion[0].classList.add("active") : ""; // add active to first default item
 
-  accordionHeaders.forEach((header, i) => header.addEventListener('click', () => {
+  accordionHeaders.forEach((header, i) => header.addEventListener("click", () => {
     imagesForAccordion.forEach(image => {
-      image.classList.remove('active');
+      image.classList.remove("active");
     });
-    imagesForAccordion[`${i}`].classList.add('active'); // add active class when clicking on button
+    imagesForAccordion[`${i}`].classList.add("active"); // add active class when clicking on button
   }));
-} // contact form
+} // Single apartment tabs
 
 
-if (window.location.pathname == '/contact/') {
+if (window.location.pathname.indexOf("apartments") > -1) {
+  const aptTabs = Array.from(document.querySelectorAll("ul.internal-nav li"));
+  const imagesForTabs = Array.from(document.querySelectorAll(".block-single-image"));
+  aptTabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => {
+      imagesForTabs.forEach(image => {
+        image.classList.remove("active");
+      });
+      aptTabs.forEach(tab => {
+        tab.classList.remove("active");
+      });
+      imagesForTabs[`${i}`].classList.add("active"); // add active class when clicking on button
+
+      aptTabs[`${i}`].classList.add("active");
+    });
+  }); // const activeTab = e => {
+  // 	aptTabs.forEach(aptTab => {
+  // 		aptTab.classList.remove("active");
+  // 	});
+  // 	e.toElement.className ? "" : e.toElement.classList.add("active");
+  // };
+  // aptTabs.forEach(aptTab => {
+  // 	aptTab.addEventListener("click", activeTab);
+  // });
+} /// contact form ///
+
+
+if (window.location.pathname == "/contact/") {
   window.onload = function () {
     // Hides spam trap
     document.getElementById("are_you_simulated").style.display = "none"; // Hides Agent/Brokerage field at the start
@@ -7354,7 +7381,7 @@ if (window.location.pathname == '/contact/') {
         if (missing_field) {
           const valueOfRequired = required[key];
           const keyOfRequired = Object.keys(required).find(key => required[key] === valueOfRequired);
-          let amISelect = document.getElementById(key).classList.contains('selectpicker');
+          let amISelect = document.getElementById(key).classList.contains("selectpicker");
           amISelect ? document.getElementById(keyOfRequired).parentNode.classList.add("error") : document.getElementById(keyOfRequired).classList.add("error");
           missing += "- " + required[key] + "\r\n";
         }
@@ -7403,5 +7430,3 @@ function shareProperty() {
   var propertyUrl = encodeURIComponent(document.URL);
   window.location.href = "mailto:?subject=Check out this property: " + propertyName + "&body=Hi,%0D%0A%0D%0AThis property is worth considering as part of our search:%20%0D%0A%0D%0AAddress: " + propertyName + "%20%0D%0A%0D%0AVisit: " + propertyUrl + "%20%0D%0A%0D%0ABest,";
 }
-
-;

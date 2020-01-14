@@ -175,6 +175,28 @@ h2 {
 	}
 }
 
+.fav-button {
+    background: url('../src/images/fav.svg') no-repeat;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+
+    &.active {
+        background: url('../src/images/fav_active.svg') no-repeat 2px 2px;
+    }
+
+}
+
+.share-button {
+    background: url('../src/images/share.svg') no-repeat;
+    font-size: 0;
+    width: 19px;
+    height: 21px;
+    margin: 0 auto;
+
+}
+
 // hero banner
 
 .wp-block-cover,
@@ -478,18 +500,6 @@ table {
 					}
 				}
 
-				.fav-button {
-					background: url('../src/images/fav.svg') no-repeat;
-					font-size: 0;
-					width: 20px;
-					height: 20px;
-					margin: 0 auto;
-
-					&.active {
-						background: url('../src/images/fav_active.svg') no-repeat 2px 2px;
-					}
-
-				}
 			}
 		}
 
@@ -646,7 +656,12 @@ table {
 						}
 
 						&:nth-child(11) {
-							grid-area: 9 / 3 / 10 / 5;
+                            grid-area: 9 / 3 / 10 / 5;
+                            span.card__price {
+                                &::before {
+                                    content: '$';
+                                }
+                            }
 						}
 
 						&:nth-child(12) {
@@ -663,3 +678,95 @@ table {
 			}
 		}
 	}
+
+// Single apaprtment
+
+body.single-apartments {
+ .thumbnail_url {display: none;}
+ .nav-icon.back {position: absolute; margin-top:0}
+ .single_apt_title {
+     border-bottom: 1px solid $light-grey;
+     padding-bottom: 1.5rem;
+     margin-bottom: 0;
+    }
+    .container-fluid {
+        padding-top:0;
+        padding-bottom:0;
+        .apt-info {
+            margin-top:2em;
+            h3 {
+                text-align:left;
+                padding-left:2em;
+                font-size: 1.125rem;
+                font-weight: 700;
+                font-family: $swiss-med;
+                margin-bottom:.8em;
+
+            }
+            .share-fav {
+                display: flex;
+                width: 60px;
+                margin-left:2.5em;
+
+                div {
+                    padding:0;
+                    &.fav-button {
+                        width: 22px;
+                        height: 22px;
+                        margin-right: 1em;
+                        background: url('../src/images/fav-dark.svg') no-repeat;
+                        &.active {
+                            background: url('../src/images/fav-dark_active.svg') no-repeat;
+                        }
+                    }
+
+                }
+            }
+            ul.internal-nav {
+                list-style: none;
+                display:flex;
+                background-color:$primary;
+                margin-top:1em;
+                li {
+                    color:$main;
+                    flex-basis: 33%;
+                    font-family: $swiss-reg;
+                    text-transform: uppercase;
+                    font-size: 0.875rem;
+                    padding: 1em 0;
+                    text-align: center;
+                    &.active {color:white}
+                }
+
+            }
+            span {
+                display: block;
+                padding-left:2.5em;
+                color:$primary;
+                &.card__residence, &.card__price, &.price_title {
+                    display: none;
+                }
+                &:nth-child(2) {
+
+                    &::after {
+                        content: ' Floor';
+                    }
+
+                }
+            }
+            div.fav-button.hide-me {display: none;}
+
+
+        }
+        .main-image {
+            .block-single-image {
+                display:none;
+                &.active{display: block;}
+            }
+
+
+
+    }
+    }
+
+}
