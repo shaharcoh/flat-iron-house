@@ -4,6 +4,42 @@ body {
 	font-size: $font-size-base;
 }
 
+// fonts
+
+@import url("//hello.myfonts.net/count/3a9727");
+
+
+@font-face {font-family: 'DidotLTStd-Roman';
+src: url('#{$fa-font-path}/3A9727_0_0.eot');
+src: url('#{$fa-font-path}/3A9727_0_0.eot?#iefix') format('embedded-opentype'),
+     url('#{$fa-font-path}/3A9727_0_0.woff2') format('woff2'),
+     url('#{$fa-font-path}/3A9727_0_0.woff') format('woff'),
+     url('#{$fa-font-path}/3A9727_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'DidotLTStd-Bold';
+  src: url('#{$fa-font-path}/3A9727_1_0.eot');
+  src: url('#{$fa-font-path}/3A9727_1_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/3A9727_1_0.woff2') format('woff2'),
+  url('#{$fa-font-path}/3A9727_1_0.woff') format('woff'),
+  url('#{$fa-font-path}/3A9727_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'Swiss721BT-Regular';
+  src: url('#{$fa-font-path}/3A9727_2_0.eot');
+  src: url('#{$fa-font-path}/3A9727_2_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/3A9727_2_0.woff2') format('woff2'),
+  url('#{$fa-font-path}/3A9727_2_0.woff') format('woff'),
+  url('#{$fa-font-path}/3A9727_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'Swiss721BT-Medium';
+  src: url('#{$fa-font-path}/3A9727_3_0.eot');
+  src: url('#{$fa-font-path}/3A9727_3_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/3A9727_3_0.woff2') format('woff2'),
+  url('#{$fa-font-path}/3A9727_3_0.woff') format('woff'),
+  url('#{$fa-font-path}/3A9727_3_0.ttf') format('truetype');}
+
 // background colors
 
 .bg-light-grey {
@@ -40,18 +76,18 @@ body {
 	}
 }
 
-@media (min-width: 768px) {
-	.navbar-expand-md .navbar-collapse {
-		display: none !important;
-	}
+// @media (min-width: 768px) {
+// 	// .navbar-expand-md .navbar-collapse {
+// 	// 	display: none !important;
+// 	// }
 
-	.navbar-expand-md .navbar-toggler {
-		display: block;
-		border: none;
-		text-align: left;
-		width: 100%;
-	}
-}
+// 	// .navbar-expand-md .navbar-toggler {
+// 	// 	display: block;
+// 	// 	border: none;
+// 	// 	text-align: left;
+// 	// 	width: 100%;
+// 	// }
+// }
 
 ul.right-menu {
 	display: flex;
@@ -739,17 +775,64 @@ body.single-apartments {
                 }
 
             }
+            div.gap {display:none;}
             span {
                 display: block;
                 padding-left:2.5em;
-                color:$primary;
+                color:$main;
+                text-transform: uppercase;
+                font-family:$swiss-med;
                 &.card__residence, &.card__price, &.price_title {
                     display: none;
                 }
-                &:nth-child(2) {
-
+                &.card__floor {
                     &::after {
-                        content: ' Floor';
+                        content:' Floor';
+                    }
+
+                }
+                &.card__bedrooms {
+                    &::after {
+                        content:' Bedrooms';
+                    }
+
+                }
+                &.card__bathrooms {
+                    &::after {
+                        content:' Bathrooms';
+                    }
+
+                }
+                &.card__sizeSF {
+                    &::after {
+                        content:' Sq ft';
+                    }
+
+                }
+                &.card__sizeM {
+                    &::after {
+                        content:' M';
+                    }
+
+                }
+                &.card__extArea {
+                    &::before {
+                        content:'Ext area ';
+                    }
+                    &::after {
+                        content:' Sq ft';
+                    }
+
+                }
+                &.card__ComCharges {
+                    &::before {
+                        content:'Com charges $';
+                    }
+
+                }
+                &.card__exposure {
+                    &::after {
+                        content:' Exposure';
                     }
 
                 }
@@ -761,7 +844,11 @@ body.single-apartments {
         .main-image {
             .block-single-image {
                 display:none;
-                &.active{display: block;}
+                background-color:$light-grey;
+                &.active{
+                    display: block;
+                    text-align: center;
+                }
             }
 
 

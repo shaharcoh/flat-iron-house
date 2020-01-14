@@ -5,4 +5,4 @@
   margin-top: 24px;
 }
 
-.wp-block-davidyeiser-detailer-single-apt-images img {max-width: 100px;}
+.wp-block-davidyeiser-detailer-single-apt-images img {max-height: 100px; display: block;}

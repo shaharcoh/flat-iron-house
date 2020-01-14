@@ -30,6 +30,7 @@ function render_dynamic_block_sai($attributes) {
 
   /* BEGIN HTML OUTPUT */
 ?>
+</div> <!-- closing container apt-info div  -->
 <div class="col-md-8 main-image">
   <div class="block-single-image active" data-toggle="modal" data-target="#gallery-modal-floorplan" data-img-num="1">
     <?php echo wp_get_attachment_image( $imageIdFloorplan, array('700', '600'), "", array( "class" => "img-responsive" ) );  ?>
