@@ -15,6 +15,7 @@ defined( 'ABSPATH' ) || exit;
     <thead>
         <tr>
             <th class="hide_on_table">Thumbnail</th>
+            <th class="hide_on_table">gap</th>
             <th class="align_left">Residence</th>
             <th><span>floor</span></th>
             <th><span>Bed</span></th>
