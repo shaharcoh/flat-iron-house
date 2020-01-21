@@ -106,7 +106,7 @@ function custom_post_type() {
         wp_enqueue_script( 'stories', get_stylesheet_directory_uri() . '/src/js/stories.js', array( 'jquery' ) );
 
         wp_enqueue_script( 'jquery-ui-js', get_stylesheet_directory_uri() . '/js/jquery-ui.min.js', false, '1.0', 'all' );
-    wp_enqueue_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.min.css', false, '1.0', 'all' );
+        wp_enqueue_style( 'jquery-ui-css', get_stylesheet_directory_uri() . '/css/jquery-ui.min.css', false, '1.0', 'all' );
 
 
 
@@ -125,5 +125,22 @@ function custom_post_type() {
         add_action( 'init', 'register_my_menus' );
 
         add_image_size( 'story-size', 356, 230, true );
+
+        add_action('acf/init', 'my_acf_op_init');
+    function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Theme Options'),
+            'menu_title'    => __('Options'),
+            'menu_slug'     => 'theme-Options',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}
 
 
