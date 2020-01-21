@@ -9,36 +9,44 @@ body {
 @import url("//hello.myfonts.net/count/3a9727");
 
 
-@font-face {font-family: 'DidotLTStd-Roman';
-src: url('#{$fa-font-path}/3A9727_0_0.eot');
-src: url('#{$fa-font-path}/3A9727_0_0.eot?#iefix') format('embedded-opentype'),
-     url('#{$fa-font-path}/3A9727_0_0.woff2') format('woff2'),
-     url('#{$fa-font-path}/3A9727_0_0.woff') format('woff'),
-     url('#{$fa-font-path}/3A9727_0_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'DidotLTStd-Roman';
+	src: url('#{$fa-font-path}/3A9727_0_0.eot');
+	src: url('#{$fa-font-path}/3A9727_0_0.eot?#iefix') format('embedded-opentype'),
+	url('#{$fa-font-path}/3A9727_0_0.woff2') format('woff2'),
+	url('#{$fa-font-path}/3A9727_0_0.woff') format('woff'),
+	url('#{$fa-font-path}/3A9727_0_0.ttf') format('truetype');
+}
 
 
-@font-face {font-family: 'DidotLTStd-Bold';
-  src: url('#{$fa-font-path}/3A9727_1_0.eot');
-  src: url('#{$fa-font-path}/3A9727_1_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_1_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_1_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_1_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'DidotLTStd-Bold';
+	src: url('#{$fa-font-path}/3A9727_1_0.eot');
+	src: url('#{$fa-font-path}/3A9727_1_0.eot?#iefix') format('embedded-opentype'),
+	url('#{$fa-font-path}/3A9727_1_0.woff2') format('woff2'),
+	url('#{$fa-font-path}/3A9727_1_0.woff') format('woff'),
+	url('#{$fa-font-path}/3A9727_1_0.ttf') format('truetype');
+}
 
 
-@font-face {font-family: 'Swiss721BT-Regular';
-  src: url('#{$fa-font-path}/3A9727_2_0.eot');
-  src: url('#{$fa-font-path}/3A9727_2_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_2_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_2_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_2_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'Swiss721BT-Regular';
+	src: url('#{$fa-font-path}/3A9727_2_0.eot');
+	src: url('#{$fa-font-path}/3A9727_2_0.eot?#iefix') format('embedded-opentype'),
+	url('#{$fa-font-path}/3A9727_2_0.woff2') format('woff2'),
+	url('#{$fa-font-path}/3A9727_2_0.woff') format('woff'),
+	url('#{$fa-font-path}/3A9727_2_0.ttf') format('truetype');
+}
 
 
-@font-face {font-family: 'Swiss721BT-Medium';
-  src: url('#{$fa-font-path}/3A9727_3_0.eot');
-  src: url('#{$fa-font-path}/3A9727_3_0.eot?#iefix') format('embedded-opentype'),
-  url('#{$fa-font-path}/3A9727_3_0.woff2') format('woff2'),
-  url('#{$fa-font-path}/3A9727_3_0.woff') format('woff'),
-  url('#{$fa-font-path}/3A9727_3_0.ttf') format('truetype');}
+@font-face {
+	font-family: 'Swiss721BT-Medium';
+	src: url('#{$fa-font-path}/3A9727_3_0.eot');
+	src: url('#{$fa-font-path}/3A9727_3_0.eot?#iefix') format('embedded-opentype'),
+	url('#{$fa-font-path}/3A9727_3_0.woff2') format('woff2'),
+	url('#{$fa-font-path}/3A9727_3_0.woff') format('woff'),
+	url('#{$fa-font-path}/3A9727_3_0.ttf') format('truetype');
+}
 
 // background colors
 
@@ -146,6 +154,8 @@ h2 {
 
 .has-text-align-center {
 	text-align: center;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .golden-text {
@@ -212,24 +222,24 @@ h2 {
 }
 
 .fav-button {
-    background: url('../src/images/fav.svg') no-repeat;
-    font-size: 0;
-    width: 20px;
-    height: 20px;
-    margin: 0 auto;
+	background: url('../src/images/fav.svg') no-repeat;
+	font-size: 0;
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
 
-    &.active {
-        background: url('../src/images/fav_active.svg') no-repeat 2px 2px;
-    }
+	&.active {
+		background: url('../src/images/fav_active.svg') no-repeat 2px 2px;
+	}
 
 }
 
 .share-button {
-    background: url('../src/images/share.svg') no-repeat;
-    font-size: 0;
-    width: 19px;
-    height: 21px;
-    margin: 0 auto;
+	background: url('../src/images/share.svg') no-repeat;
+	font-size: 0;
+	width: 19px;
+	height: 21px;
+	margin: 0 auto;
 
 }
 
@@ -238,6 +248,16 @@ h2 {
 .wp-block-cover,
 .wp-block-cover-image {
 	height: 100vh;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	&.custom-height-60vh {
+		height: 60vh;
+	}
+
+	&.hero-background-image {
+		margin-top: 0rem;
+	}
 }
 
 // custom banner
@@ -267,6 +287,98 @@ h2 {
 			flex-direction: row-reverse;
 		}
 	}
+}
+
+// Building amenities
+
+.wp-block-group__inner-container {
+	display: flex;
+}
+
+.wp-block-gallery.accordion-images,
+.accordion.building-amenities {
+	display: inline-block;
+	width: 49%;
+}
+
+.accordion.building-amenities {
+	padding-top: 15vh;
+}
+
+.accordion-images .blocks-gallery-item {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+	height: 0px;
+
+	&.active {
+		position: relative;
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0s, opacity 0.5s linear;
+		z-index: 9;
+		height: auto;
+	}
+}
+
+#accordion-building-amenities.ui-accordion .ui-accordion-header {
+	padding: 2.5em .5em 2.5em .7em;
+	text-align: left;
+	border-top: 1px solid #AB9974;
+	font-size: 18px;
+
+
+
+	&.ui-state-active,
+	&.ui-state-default {
+		background: transparent;
+		border-bottom: 0px;
+		border-left: 0px;
+		border-right: 0px;
+
+	}
+
+	&:last-of-type {
+		border-bottom: 1px solid #AB9974;
+
+		&.ui-state-active {
+			border-bottom: 0px;
+		}
+	}
+
+	&.ui-state-default {
+		color: #AB9974;
+	}
+
+	&.ui-state-active {
+		color: #2D2D2D;
+	}
+}
+
+#accordion-building-amenities .ui-widget-content {
+	border: 0px;
+
+	&:last-of-type {
+		border-bottom: 1px solid #AB9974;
+	}
+}
+
+*:focus {
+	outline: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.block-banner.container {
+	max-width: 97%;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.block-banner-title {
+	text-align: left;
 }
 
 // Single story
@@ -554,11 +666,11 @@ table {
 				padding: 10px;
 				width: auto !important;
 
-                &:nth-child(1),
-                &:nth-child(2),
+				&:nth-child(1),
+				&:nth-child(2),
 				&:nth-child(10),
-                &:nth-child(11),
-                &:nth-child(12) {
+				&:nth-child(11),
+				&:nth-child(12) {
 					display: none;
 				}
 
@@ -628,232 +740,272 @@ table {
 							&::after {
 								content: 'th floor';
 								margin-left: -5px;
-                                     }
-                             }
-						}
-
-						&:nth-child(5) {
-							grid-area: 4 / 3 / 5 / 4;
-							padding-right: 0 !important;
-							color: $main;
-							text-transform: uppercase;
-
-							span {
-								&::after {
-									content: 'Bedrooms/';
-								}
-							}
-
-
-						}
-
-						&:nth-child(6) {
-							grid-area: 4 / 4 / 5 / 5;
-							padding-left: 0 !important;
-							color: $main;
-							text-transform: uppercase;
-
-							span {
-								&::after {
-									content: 'Bathrooms';
-								}
 							}
 						}
+					}
 
-						&:nth-child(7) {
-							grid-area: 5 / 3 / 6 / 5;
+					&:nth-child(5) {
+						grid-area: 4 / 3 / 5 / 4;
+						padding-right: 0 !important;
+						color: $main;
+						text-transform: uppercase;
 
-						}
-
-						&:nth-child(8) {
-							grid-area: 6 / 3 / 7 / 5;
-
-							&::before {
-								content: 'Ext area ';
-							}
-
-						}
-
-						&:nth-child(9) {
-							grid-area: 7 / 3 / 8 / 5;
-
-							&::before {
-								content: 'Com Carges ';
-							}
-
-						}
-
-						&:nth-child(10) {
-							grid-area: 8 / 3 / 9 / 5;
-
+						span {
 							&::after {
-								content: ' Exposure';
+								content: 'Bedrooms/';
 							}
 						}
 
-						&:nth-child(11) {
-                            grid-area: 9 / 3 / 10 / 5;
-                            span.card__price {
-                                &::before {
-                                    content: '$';
-                                }
-                            }
+
+					}
+
+					&:nth-child(6) {
+						grid-area: 4 / 4 / 5 / 5;
+						padding-left: 0 !important;
+						color: $main;
+						text-transform: uppercase;
+
+						span {
+							&::after {
+								content: 'Bathrooms';
+							}
+						}
+					}
+
+					&:nth-child(7) {
+						grid-area: 5 / 3 / 6 / 5;
+
+					}
+
+					&:nth-child(8) {
+						grid-area: 6 / 3 / 7 / 5;
+
+						&::before {
+							content: 'Ext area ';
 						}
 
-						&:nth-child(12) {
-							grid-area: 10 / 3 / 11 / 5;
+					}
+
+					&:nth-child(9) {
+						grid-area: 7 / 3 / 8 / 5;
+
+						&::before {
+							content: 'Com Carges ';
 						}
 
-						.fav-button {
-							position: absolute;
-							top: 10px;
-							right: 10px;
+					}
+
+					&:nth-child(10) {
+						grid-area: 8 / 3 / 9 / 5;
+
+						&::after {
+							content: ' Exposure';
 						}
+					}
+
+					&:nth-child(11) {
+						grid-area: 9 / 3 / 10 / 5;
+
+						span.card__price {
+							&::before {
+								content: '$';
+							}
+						}
+					}
+
+					&:nth-child(12) {
+						grid-area: 10 / 3 / 11 / 5;
+					}
+
+					.fav-button {
+						position: absolute;
+						top: 10px;
+						right: 10px;
 					}
 				}
 			}
 		}
 	}
+}
 
 // Single apaprtment
 
 body.single-apartments {
- .thumbnail_url {display: none;}
- .nav-icon.back {position: absolute; margin-top:0}
- .single_apt_title {
-     border-bottom: 1px solid $light-grey;
-     padding-bottom: 1.5rem;
-     margin-bottom: 0;
-    }
-    .container-fluid {
-        padding-top:0;
-        padding-bottom:0;
-        .apt-info {
-            margin-top:2em;
-            h3 {
-                text-align:left;
-                padding-left:2em;
-                font-size: 1.125rem;
-                font-weight: 700;
-                font-family: $swiss-med;
-                margin-bottom:.8em;
+	.thumbnail_url {
+		display: none;
+	}
 
-            }
-            .share-fav {
-                display: flex;
-                width: 60px;
-                margin-left:2.5em;
+	.nav-icon.back {
+		position: absolute;
+		margin-top: 0
+	}
 
-                div {
-                    padding:0;
-                    &.fav-button {
-                        width: 22px;
-                        height: 22px;
-                        margin-right: 1em;
-                        background: url('../src/images/fav-dark.svg') no-repeat;
-                        &.active {
-                            background: url('../src/images/fav-dark_active.svg') no-repeat;
-                        }
-                    }
+	.single_apt_title {
+		border-bottom: 1px solid $light-grey;
+		padding-bottom: 1.5rem;
+		margin-bottom: 0;
+	}
 
-                }
-            }
-            ul.internal-nav {
-                list-style: none;
-                display:flex;
-                background-color:$primary;
-                margin-top:1em;
-                li {
-                    color:$main;
-                    flex-basis: 33%;
-                    font-family: $swiss-reg;
-                    text-transform: uppercase;
-                    font-size: 0.875rem;
-                    padding: 1em 0;
-                    text-align: center;
-                    &.active {color:white}
-                }
+	.container-fluid {
+		padding-top: 0;
+		padding-bottom: 0;
 
-            }
-            div.gap {display:none;}
-            span {
-                display: block;
-                padding-left:2.5em;
-                color:$main;
-                text-transform: uppercase;
-                font-family:$swiss-med;
-                &.card__residence, &.card__price, &.price_title {
-                    display: none;
-                }
-                &.card__floor {
-                    &::after {
-                        content:' Floor';
-                    }
+		.apt-info {
+			margin-top: 2em;
 
-                }
-                &.card__bedrooms {
-                    &::after {
-                        content:' Bedrooms';
-                    }
+			h3 {
+				text-align: left;
+				padding-left: 2em;
+				font-size: 1.125rem;
+				font-weight: 700;
+				font-family: $swiss-med;
+				margin-bottom: .8em;
 
-                }
-                &.card__bathrooms {
-                    &::after {
-                        content:' Bathrooms';
-                    }
+			}
 
-                }
-                &.card__sizeSF {
-                    &::after {
-                        content:' Sq ft';
-                    }
+			.share-fav {
+				display: flex;
+				width: 60px;
+				margin-left: 2.5em;
 
-                }
-                &.card__sizeM {
-                    &::after {
-                        content:' M';
-                    }
+				div {
+					padding: 0;
 
-                }
-                &.card__extArea {
-                    &::before {
-                        content:'Ext area ';
-                    }
-                    &::after {
-                        content:' Sq ft';
-                    }
+					&.fav-button {
+						width: 22px;
+						height: 22px;
+						margin-right: 1em;
+						background: url('../src/images/fav-dark.svg') no-repeat;
 
-                }
-                &.card__ComCharges {
-                    &::before {
-                        content:'Com charges $';
-                    }
+						&.active {
+							background: url('../src/images/fav-dark_active.svg') no-repeat;
+						}
+					}
 
-                }
-                &.card__exposure {
-                    &::after {
-                        content:' Exposure';
-                    }
+				}
+			}
 
-                }
-            }
-            div.fav-button.hide-me {display: none;}
+			ul.internal-nav {
+				list-style: none;
+				display: flex;
+				background-color: $primary;
+				margin-top: 1em;
+
+				li {
+					color: $main;
+					flex-basis: 33%;
+					font-family: $swiss-reg;
+					text-transform: uppercase;
+					font-size: 0.875rem;
+					padding: 1em 0;
+					text-align: center;
+
+					&.active {
+						color: white
+					}
+				}
+
+			}
+
+			div.gap {
+				display: none;
+			}
+
+			span {
+				display: block;
+				padding-left: 2.5em;
+				color: $main;
+				text-transform: uppercase;
+				font-family: $swiss-med;
+
+				&.card__residence,
+				&.card__price,
+				&.price_title {
+					display: none;
+				}
+
+				&.card__floor {
+					&::after {
+						content: ' Floor';
+					}
+
+				}
+
+				&.card__bedrooms {
+					&::after {
+						content: ' Bedrooms';
+					}
+
+				}
+
+				&.card__bathrooms {
+					&::after {
+						content: ' Bathrooms';
+					}
+
+				}
+
+				&.card__sizeSF {
+					&::after {
+						content: ' Sq ft';
+					}
+
+				}
+
+				&.card__sizeM {
+					&::after {
+						content: ' M';
+					}
+
+				}
+
+				&.card__extArea {
+					&::before {
+						content: 'Ext area ';
+					}
+
+					&::after {
+						content: ' Sq ft';
+					}
+
+				}
+
+				&.card__ComCharges {
+					&::before {
+						content: 'Com charges $';
+					}
+
+				}
+
+				&.card__exposure {
+					&::after {
+						content: ' Exposure';
+					}
+
+				}
+			}
+
+			div.fav-button.hide-me {
+				display: none;
+			}
 
 
-        }
-        .main-image {
-            .block-single-image {
-                display:none;
-                background-color:$light-grey;
-                &.active{
-                    display: block;
-                    text-align: center;
-                }
-            }
+		}
+
+		.main-image {
+			.block-single-image {
+				display: none;
+				background-color: $light-grey;
+
+				&.active {
+					display: block;
+					text-align: center;
+				}
+			}
 
 
 
-    }
-    }
+		}
+	}
 
 }

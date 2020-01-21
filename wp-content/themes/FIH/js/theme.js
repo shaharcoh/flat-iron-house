@@ -7209,6 +7209,11 @@ jQuery(document).ready(function ($) {
   }); // Slick slider for neighborhood page
 
   $(".slider").slick({});
+  $(function () {
+    $("#accordion-building-amenities").accordion({
+      collapsible: true
+    });
+  });
 }); // floorplans table>grid view
 
 const tableViewButton = document.querySelector(".view_btn.table");

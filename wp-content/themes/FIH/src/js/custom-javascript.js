@@ -47,14 +47,13 @@ favBtns.forEach(favBtn => {
 
 // floorplans table
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 	$("#apartments").DataTable({
 		searching: false,
 		lengthChange: false,
 		paging: false,
 		info: false,
-		columnDefs: [
-			{
+		columnDefs: [{
 				targets: 1,
 				orderable: false
 			},
@@ -68,6 +67,13 @@ jQuery(document).ready(function($) {
 	// Slick slider for neighborhood page
 
 	$(".slider").slick({});
+
+	$(function () {
+		$("#accordion-building-amenities").accordion({
+			collapsible: true
+		});
+	});
+
 });
 
 // floorplans table>grid view
@@ -79,14 +85,14 @@ const residence = document.querySelector(".residence");
 const favCell = document.querySelector(".fav-cell");
 
 if (window.location.pathname == "/floor-plans/") {
-	gridViewButton.onclick = function() {
+	gridViewButton.onclick = function () {
 		apartmentsTable.classList.add("grid-view");
 		apartmentsTable.classList.remove("dataTable");
 		tableViewButton.classList.remove("active");
 		gridViewButton.classList.add("active");
 	};
 
-	tableViewButton.onclick = function() {
+	tableViewButton.onclick = function () {
 		apartmentsTable.classList.remove("grid-view");
 		apartmentsTable.classList.add("dataTable");
 		tableViewButton.classList.add("active");
@@ -121,7 +127,7 @@ if (window.location.pathname == "/building-amenities/") {
 if (window.location.pathname.indexOf("apartments") > -1) {
 	const aptTabs = Array.from(
 		document.querySelectorAll("ul.internal-nav li")
-		);
+	);
 
 	const imagesForTabs = Array.from(
 		document.querySelectorAll(".block-single-image")
@@ -129,22 +135,22 @@ if (window.location.pathname.indexOf("apartments") > -1) {
 
 	aptTabs.forEach((tab, i) => {
 
-	tab.addEventListener("click", () => {
-		imagesForTabs.forEach(image => {
-				image.classList.remove("active");
-			});
+		tab.addEventListener("click", () => {
+				imagesForTabs.forEach(image => {
+					image.classList.remove("active");
+				});
 
-			aptTabs.forEach(tab => {
-				tab.classList.remove("active");
-			});
+				aptTabs.forEach(tab => {
+					tab.classList.remove("active");
+				});
 
-			imagesForTabs[`${i}`].classList.add("active"); // add active class when clicking on button
-			aptTabs[`${i}`].classList.add("active");
+				imagesForTabs[`${i}`].classList.add("active"); // add active class when clicking on button
+				aptTabs[`${i}`].classList.add("active");
 
-		}
+			}
 
-		)}
-	);
+		)
+	});
 
 	// const activeTab = e => {
 	// 	aptTabs.forEach(aptTab => {
@@ -162,7 +168,7 @@ if (window.location.pathname.indexOf("apartments") > -1) {
 /// contact form ///
 
 if (window.location.pathname == "/contact/") {
-	window.onload = function() {
+	window.onload = function () {
 		// Hides spam trap
 
 		document.getElementById("are_you_simulated").style.display = "none";
@@ -208,18 +214,18 @@ if (window.location.pathname == "/contact/") {
 		}
 	}
 
-	document.getElementById("agent_yes").onchange = function() {
+	document.getElementById("agent_yes").onchange = function () {
 		hideAgent();
 	};
-	document.getElementById("agent_no").onchange = function() {
+	document.getElementById("agent_no").onchange = function () {
 		hideAgent();
 		showBroker();
 	};
 
-	document.getElementById("broker_yes").onchange = function() {
+	document.getElementById("broker_yes").onchange = function () {
 		showBroker();
 	};
-	document.getElementById("broker_no").onchange = function() {
+	document.getElementById("broker_no").onchange = function () {
 		showBroker();
 	};
 
@@ -242,13 +248,17 @@ if (window.location.pathname == "/contact/") {
 
 		var missing = "";
 
-		var required = { contact_email: "Email" };
+		var required = {
+			contact_email: "Email"
+		};
 
 		var customRequired = document.querySelectorAll(
 			"input:required, textarea:required, select:required"
 		);
 
-		var questionsRequired = { answers_5538: "Referral source" };
+		var questionsRequired = {
+			answers_5538: "Referral source"
+		};
 		agentYes.checked && (questionsRequired["answers_5554"] = "Brokerage Firm");
 		brokerYes.checked && (questionsRequired["answers_5553"] = "Broker Company");
 
@@ -278,7 +288,7 @@ if (window.location.pathname == "/contact/") {
 			if (elements.length > 0) {
 				var missing_field = true;
 
-				elements.forEach(function(el) {
+				elements.forEach(function (el) {
 					if (
 						el.length < 1 ||
 						(el &&
@@ -303,10 +313,11 @@ if (window.location.pathname == "/contact/") {
 						.classList.contains("selectpicker");
 
 					amISelect
-						? document
-								.getElementById(keyOfRequired)
-								.parentNode.classList.add("error")
-						: document.getElementById(keyOfRequired).classList.add("error");
+						?
+						document
+						.getElementById(keyOfRequired)
+						.parentNode.classList.add("error") :
+						document.getElementById(keyOfRequired).classList.add("error");
 
 					missing += "- " + required[key] + "\r\n";
 				}
