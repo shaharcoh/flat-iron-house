@@ -298,7 +298,7 @@ h2 {
 	}
 }
 
-// Building amenities
+// Building amenities page
 
 .wp-block-group__inner-container {
 	display: flex;
@@ -332,8 +332,11 @@ h2 {
 }
 
 //hide CTAs on /building-amenities/
-.page-id-373 .wp-block-button__link.wp-block-button__link__onwhite {
-	display: none;
+.page-id-373,
+.page-id-10 {
+	.wp-block-button__link.wp-block-button__link__onwhite {
+		display: none;
+	}
 }
 
 #accordion-building-amenities.ui-accordion .ui-accordion-header {
@@ -393,6 +396,20 @@ h2 {
 
 .block-banner-title {
 	text-align: left;
+}
+
+// Residences page
+
+.header-gold-text {
+	padding: 10vh 0;
+	text-align: center;
+	background: url("/wp-content/uploads/2020/01/gold-text-bg.jpg");
+	background-size: cover;
+
+	p {
+		color: #ab9974;
+		text-transform: uppercase;
+	}
 }
 
 // Single story
