@@ -4,7 +4,7 @@ To run a local instence of the size via Docker:
 
 * Install docker from [https://www.docker.com/](https://www.docker.com/)
 * Full guide [here](https://upcloud.com/community/tutorials/wordpress-with-docker/)
-* to use it run docker and the two containers (wordpress and db) and go to [http://localhost/](http://localhost/)
+* to use it run docker and the two containers (wordpress and db) and go to [https://wordsearch-ny.dev/flat-iron-house/](https://wordsearch-ny.dev/flat-iron-house/)
 
 *To get gulp to manage scss and js compiling open Terminal and follow these instructions: <br>
 

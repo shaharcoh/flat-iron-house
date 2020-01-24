@@ -103,8 +103,9 @@ if (window.location.pathname == "/floor-plans/") {
 // image transition on accordion change -- building-amenities page
 
 if (window.location.pathname == "/building-amenities/") {
+
 	const accordionHeaders = Array.from(
-		document.querySelectorAll(".accordion.building-amenities .btn.btn-link")
+		document.querySelectorAll("#accordion-building-amenities h3")
 	);
 	const imagesForAccordion = Array.from(
 		document.querySelectorAll(".accordion-images ul li")

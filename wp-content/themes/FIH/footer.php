@@ -20,14 +20,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<div class="row">
-
+			
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-
-						temp content
 
 					</div><!-- .site-info -->
 

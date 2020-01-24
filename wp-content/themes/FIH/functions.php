@@ -119,6 +119,7 @@ function custom_post_type() {
         register_nav_menus(
         array(
          'additional-menu' => __( 'Right Menu' ),
+         'footer-menu' => __( 'Footer Menu' ),
          )
          );
         }

@@ -258,6 +258,15 @@ h2 {
 	&.hero-background-image {
 		margin-top: 0rem;
 	}
+
+	&.has-background-dim {
+		max-width: 97%;
+		margin: 0 auto;
+	}
+
+	&.hero-background-image {
+		max-width: 100%;
+	}
 }
 
 // custom banner
@@ -320,6 +329,11 @@ h2 {
 		z-index: 9;
 		height: auto;
 	}
+}
+
+//hide CTAs on /building-amenities/
+.page-id-373 .wp-block-button__link.wp-block-button__link__onwhite {
+	display: none;
 }
 
 #accordion-building-amenities.ui-accordion .ui-accordion-header {
@@ -1014,4 +1028,43 @@ body.single-apartments {
 
 .entry-footer {
 	background-color: $primary;
+	padding: 20px 0px;
+	margin-top: 90px;
+}
+
+footer .footer-col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.social-media-col a {
+		margin-right: 30px;
+	}
+}
+
+#menu-footer-menu {
+	margin-bottom: 0px;
+	padding-left: 0px;
+
+	.menu-item {
+		display: inline-block;
+
+		&:last-of-type a {
+			border-right: 0px;
+		}
+
+		a {
+			color: #fff;
+			padding: 0px 10px;
+			border-right: 1px solid white;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#wrapper-footer {
+	margin-top: 0px;
 }

@@ -7240,7 +7240,7 @@ if (window.location.pathname == "/floor-plans/") {
 
 
 if (window.location.pathname == "/building-amenities/") {
-  const accordionHeaders = Array.from(document.querySelectorAll(".accordion.building-amenities .btn.btn-link"));
+  const accordionHeaders = Array.from(document.querySelectorAll("#accordion-building-amenities h3"));
   const imagesForAccordion = Array.from(document.querySelectorAll(".accordion-images ul li"));
   imagesForAccordion ? imagesForAccordion[0].classList.add("active") : ""; // add active to first default item
 
