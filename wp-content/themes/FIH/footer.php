@@ -27,7 +27,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						temp content
+						<div class="container">
+							<div class="row">
+								<div class="social-icons col float-left">social</div>
+								<div class="footer-logo col d-flex justify-content-center">logo</div>
+								<div class="footer-links col d-flex justify-content-end">
+									<ul>
+										<li><a href="">Team</a></li>
+										<li><a href="">Legal</a></li>
+										<li><a href="">Cookies</a></li>
+										<li><a href="">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
 					</div><!-- .site-info -->
 
