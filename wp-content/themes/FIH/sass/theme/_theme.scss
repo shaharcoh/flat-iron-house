@@ -867,6 +867,21 @@ body.single-apartments {
 	background:#3c3c3b !important;
 	min-height:100px;
 
+	.social-icons {
+		li {
+			display:inline;
+			
+			a {
+				
+				padding-right:20px;
+			}
+			a:hover {	
+				
+			}
+		}
+
+	}
+
 	.footer-links {
 		li {
 			display:inline;

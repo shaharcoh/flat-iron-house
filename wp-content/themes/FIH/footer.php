@@ -29,8 +29,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="container">
 							<div class="row">
-								<div class="social-icons col float-left">social</div>
-								<div class="footer-logo col d-flex justify-content-center">logo</div>
+								<div class="social-icons col float-left">
+								<ul>
+										<li><a href=""><img src="https://wordsearch-ny.dev/flat-iron-house/wp-content/uploads/2020/01/twitter.svg" /</a></li>
+										<li><a href=""><img src="https://wordsearch-ny.dev/flat-iron-house/wp-content/uploads/2020/01/facebook.svg" /</a></li>
+										<li><a href=""><img src="https://wordsearch-ny.dev/flat-iron-house/wp-content/uploads/2020/01/instagram.svg" /</a></li>
+										<li><a href=""><img src="https://wordsearch-ny.dev/flat-iron-house/wp-content/uploads/2020/01/map-pin.svg" /></a></li>
+									</ul>
+								</div>
+								<div class="footer-logo col d-flex justify-content-center">
+									<img src="https://wordsearch-ny.dev/flat-iron-house/wp-content/uploads/2020/01/white-footer-logo.svg" />
+								</div>
 								<div class="footer-links col d-flex justify-content-end">
 									<ul>
 										<li><a href="">Team</a></li>
