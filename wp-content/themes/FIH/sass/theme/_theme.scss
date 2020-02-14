@@ -142,8 +142,14 @@ h2 {
 	font-size: 1.75rem;
 }
 
+.has-huge-font-size {
+	font-family: $didot-bld;
+	//font-size: 1.75rem;
+	font-size:48px;
+}
 .xl-font {
 	font-size: 2.8125rem;
+	font-family: $didot-bld;
 }
 
 .has-text-align-center {
